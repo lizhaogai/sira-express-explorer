@@ -23,6 +23,7 @@ function buildLoopbackApplication(sapp) {
         get: function () {
             return sapp.get.apply(sapp, arguments);
         },
+        models: sapp.models,
         remotes: function () {
             return sapp.remotes;
         }
