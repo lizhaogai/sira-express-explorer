@@ -19,12 +19,14 @@ function explorer(sapp, options) {
 }
 
 function buildLoopbackApplication(sapp) {
-    return {
+    var loopbackApplication = {
         get: function () {
             return sapp.get.apply(sapp, arguments);
         },
         remotes: function () {
             return sapp.remotes;
         }
-    }
+    };
+    Object.defineProperty(loopbackApplication, 'models', sapp.models);
+    return loopbackApplication;
 }
