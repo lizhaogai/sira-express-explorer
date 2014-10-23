@@ -28,6 +28,6 @@ function buildLoopbackApplication(sapp) {
             return sapp.remotes;
         }
     };
-    Object.defineProperty(loopbackApplication, 'models', sapp.models);
+//    Object.defineProperty(loopbackApplication, 'models', sapp.models);
     return loopbackApplication;
 }
